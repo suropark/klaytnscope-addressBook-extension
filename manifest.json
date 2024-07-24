@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Klaytnscope Address Book",
+  "version": "1.0",
+  "description": "Replace Klaytnscope addresses with registered names",
+  "permissions": ["storage"],
+  "host_permissions": ["https://klaytnscope.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://klaytnscope.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "favicon.ico"
+  },
+  "icons": {
+    "16": "favicon.ico",
+    "48": "favicon.ico",
+    "128": "favicon.ico"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["favicon.ico", "images/*"],
+      "matches": ["https://klaytnscope.com/*"]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body {
+        min-width: 450px;
+      }
+      .bg-lime {
+        background-color: #bff009;
+      }
+      .text-dark-green {
+        color: #070804;
+      }
+      .border-lime {
+        border-color: #bff009;
+      }
+      .bg-dark-green {
+        background-color: #070804;
+      }
+      .text-lime {
+        color: #bff009;
+      }
+      .bg-light-lime {
+        background-color: #e6f7c1;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-4">
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+      <div class="p-8">
+        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-4">Address Book</div>
+        <form id="addForm" class="mb-4">
+          <input
+            type="text"
+            id="address"
+            placeholder="EVM Address"
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 mb-2"
+          />
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 mb-2"
+          />
+          <textarea
+            id="memo"
+            placeholder="Memo (optional)"
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 mb-2"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full px-3 py-2 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+          >
+            Add to Address Book
+          </button>
+        </form>
+        <div id="entries" class="space-y-2">
+          <!-- 주소 목록이 비어 있을 때 표시할 메시지 -->
+          <p id="emptyMessage" class="text-gray-500 text-center hidden">No addresses added yet.</p>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
